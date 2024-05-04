@@ -98,7 +98,7 @@ export const InventoryDataPageCommon = ({
           { accessor: "value", header: "Value" },
           {
             accessor: "-" as any,  
-            header: "Value",
+            header: "",
             renderCell: (rowData: ProductEntity, index: number) => {  // rendering a cusom cell (which is a react node)
               return (
                 <RowEditCell

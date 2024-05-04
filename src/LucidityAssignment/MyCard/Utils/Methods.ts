@@ -1,6 +1,6 @@
 import { ProductEntity } from "./Constants";
 
-const getAmountValFromDollarString = ({
+export const getAmountValFromDollarString = ({
   currencyVal,
 }: {
   currencyVal: string;
@@ -23,7 +23,7 @@ export const getProductInventoryCountData = ({
     }); // total value
     totalProductsCount += 1; // total products count
     const isCurrentOutOfStock = !!(product.quantity === 0);
-    if (isCurrentOutOfStock) return outOfStocksCount++; // out of stock  // hashing done because of finding unique vals
+    if (isCurrentOutOfStock) outOfStocksCount++; // out of stock  // hashing done because of finding unique vals
     productsObjWithProductCategoryAsKey[product.category] = "not - important";
   });
   return {

@@ -4,6 +4,8 @@ import { IoMdEye } from "react-icons/io";
 import { MdDeleteOutline, MdEdit } from "react-icons/md";
 import { ProductEntity } from "./Utils/Constants";
 import { FaEyeSlash } from "react-icons/fa";
+import { useModal } from "@ebay/nice-modal-react";
+import { EditProductModal } from "./EditProductModal";
 
 export const RowEditCell = ({
   index,
@@ -18,6 +20,7 @@ export const RowEditCell = ({
   onDelete: () => void;
   isUserAdmin: boolean;
 }) => {
+  const editModal = useModal(EditProductModal);
   const [isRowDisabled, setIsRowDisabled] = useState(true);
   const actionsDisabled = !isUserAdmin || !isRowDisabled;
   return (
@@ -27,14 +30,14 @@ export const RowEditCell = ({
         // size="lg"
         isDisabled={actionsDisabled}
         bg={"transparent"}
-        color={isUserAdmin ? "green" :'grey'}
+        color={isUserAdmin ? "green" : "grey"}
         icon={<MdEdit />}
-        onClick={() => console.log("")}
+        onClick={() => editModal.show({ onChangeRowData, rowData })}
       />
       <IconButton
         aria-label=""
         // size="lg"
-        color={isUserAdmin?"purple" :'grey'}
+        color={isUserAdmin ? "purple" : "grey"}
         bg={"transparent"}
         isDisabled={!isUserAdmin}
         icon={!isRowDisabled ? <FaEyeSlash /> : <IoMdEye />}
@@ -48,7 +51,7 @@ export const RowEditCell = ({
         aria-label=""
         // size="lg"
         bg={"transparent"}
-        color={ isUserAdmin ? "red":'grey'}
+        color={isUserAdmin ? "red" : "grey"}
         icon={<MdDeleteOutline />}
         onClick={onDelete}
         isDisabled={actionsDisabled}

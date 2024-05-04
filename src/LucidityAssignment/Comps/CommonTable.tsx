@@ -1,18 +1,14 @@
 import {
   Flex,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
-  Text,
-  Tfoot,
   Th,
   Thead,
   Tr,
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
-import { RiErrorWarningFill } from "react-icons/ri";
 import { NoDataFound } from "./NoDataFound";
 
 export type CommonTableProps<T> = {
