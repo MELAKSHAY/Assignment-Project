@@ -1,21 +1,31 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { CommonCard } from "../Comps/CommonCard";
 import { Box, HStack, Text } from "@chakra-ui/react";
-import { PiTrolleyBold } from "react-icons/pi";
+
 import { IconType } from "react-icons";
-export const InventoryStatsCard = ({ iconNode }: { iconNode: IconType }) => {
+export const InventoryStatsCard = ({
+  iconNode,
+  count,
+  heading,
+}: {
+  iconNode: IconType;
+  heading: string;
+  count: number;
+}) => {
   return (
     <CommonCard
       bodyContent={
-        <HStack alignItems={'flex-start'} gap={'20px'}>
-         {React.createElement(iconNode,{size:'30px',color:'white'})}
+        <HStack alignItems={"flex-start"} gap={"20px"} height={'100%'} >
+          {React.createElement(iconNode, { size: "30px", color: "white" })}
           <Box>
-            <Text style={{ color: "white" }}>Total Products</Text>
-            <Text style={{ color: "white", fontSize: "xx-large" }}>2</Text>
+            <Text style={{ color: "white" }}>{heading}</Text>
+            <Text style={{ color: "white", fontSize: "xx-large" }}>
+              {count}
+            </Text>
           </Box>
         </HStack>
       }
-      style={{ width: "100%" }}
+      style={{ width: "100%", borderRadius:'12px'}}
       variant={"filled"}
       background={"#293829"}
     />

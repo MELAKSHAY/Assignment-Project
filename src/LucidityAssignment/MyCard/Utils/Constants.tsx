@@ -10,7 +10,7 @@ export enum ScreenView {
     quantity: number;
     price: string;
   }
-  export const InventoryCardType :{[key:string]:{header:string}} ={
+  export const InventoryCardType  ={
    totalProduct:{header:'Total Products'},
    totalStoreValue:{header:'Total Store Value'},
    outOfStocks:{header:'Out of Stocks'},
