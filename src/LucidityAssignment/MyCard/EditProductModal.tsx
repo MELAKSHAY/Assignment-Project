@@ -91,7 +91,7 @@ export const EditProductModal = NiceModal.create(
           </SimpleGrid>
         }
         header={
-          <VStack width={"fit-content"} alignItems={"flex-start"}>
+          <VStack width={"fit-content"} alignItems={"flex-start"} marginBlock={'20px'} gap={0}>
             <Text color={"white"} fontSize={"xx-large"}>
               Edit Product
             </Text>
