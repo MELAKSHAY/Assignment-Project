@@ -99,7 +99,7 @@ export const InventoryDataPageCommon = ({
           {
             accessor: "-" as any,  
             header: "",
-            renderCell: (rowData: ProductEntity, index: number) => {  // rendering a cusom cell (which is a react node)
+            renderCell: (rowData: ProductEntity, index: number) => {  // rendering a custom cell (which is a react node)
               return (
                 <RowEditCell
                   index={index}

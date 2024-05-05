@@ -21,8 +21,8 @@ export const RowEditCell = ({
   isUserAdmin: boolean;
 }) => {
   const editModal = useModal(EditProductModal);
-  const [isRowDisabled, setIsRowDisabled] = useState(true);
-  const actionsDisabled = !isUserAdmin || !isRowDisabled;
+  const [isRowEnabled, setIsRowEnabled] = useState(true);
+  const actionsDisabled = !isUserAdmin || !isRowEnabled;
   return (
     <HStack>
       <IconButton
@@ -40,9 +40,9 @@ export const RowEditCell = ({
         color={isUserAdmin ? "purple" : "grey"}
         bg={"transparent"}
         isDisabled={!isUserAdmin}
-        icon={!isRowDisabled ? <FaEyeSlash /> : <IoMdEye />}
+        icon={!isRowEnabled ? <FaEyeSlash /> : <IoMdEye />}
         onClick={() => {
-          setIsRowDisabled((prev) => {
+          setIsRowEnabled((prev) => {
             return !prev;
           });
         }}
