@@ -1,5 +1,4 @@
 import {
-  chakra,
   Modal,
   ModalBody,
   ModalBodyProps,
@@ -10,7 +9,6 @@ import {
   ModalFooterProps,
   ModalHeader,
   ModalHeaderProps,
-  ModalOverlay,
   ModalProps,
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";

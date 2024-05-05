@@ -1,5 +1,4 @@
 import {
-  Flex,
   Table,
   TableContainer,
   Tbody,

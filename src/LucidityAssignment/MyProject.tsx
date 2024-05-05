@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { CommonSwitch } from "./Comps/CommonSwitch";
-import { HStack, SimpleGrid, Text, } from "@chakra-ui/react";
+import { HStack,Text, } from "@chakra-ui/react";
 import { PageLayoutWrapper } from "./Comps/PageLayoutWrapper";
-import { InventoryStatsCard } from "./MyCard/InventoryStatsCard";
 import { ScreenView } from "./MyCard/Utils/Constants";
-import { InventoryDataPageCommon } from "./Pages/InventoryDataPageCommon";
 import { UserDataPage } from "./Pages/UserDataPage";
 import { AdminDataPage } from "./Pages/AdminDataPage";
 
